@@ -22,7 +22,7 @@ public class Main {
         int opc;
         
         /**Declaracion para leer datos*/
-        Scanner leer = new Scanner(System.in);//funcion para escanear el dato del usuario
+        Scanner leer = new Scanner(System.in);
         
         //Declaracion de los objetos
         Producto producto1 = new Producto("Papas", 2000, 30);
@@ -33,7 +33,7 @@ public class Main {
         Producto producto6 = new Producto("Vacio", 0, 0);
         
         titulo();
-        do{//repeticion del menu de opciones
+        do{/**Desde aqui se repetira el ejercicio*/
         System.out.println(" ");
         System.out.println(" ");
         System.out.println("Productos.");
@@ -43,7 +43,7 @@ public class Main {
         System.out.println("4.Chocorramo.");
         System.out.println("5."+producto5.nombre);
         System.out.println("6."+producto6.nombre);
-        System.out.println("7.Agregar producto nuevo."); 
+        System.out.println("7.Agregar producto nuevo. (Espacio 5 o 6)"); 
         System.out.println("0.Salir.");
         System.out.print("Digite el numero de la opcion que desea: ");
         
@@ -53,18 +53,18 @@ public class Main {
             case 1:
                 //producto 1
                 opc=0;
-                 do{//repeticion del menu de opciones
+                 do{
                      subMenu();
                     opc = leer.nextInt();//escaneo del dato del menu del usuario
                     switch(opc){
 
                         case 1:
-                            //metodo de la compra
+                            //comprar
                             producto1.comprar();
                             break;
 
                         case 2:
-                            //metodo para añadir n cantidad de productos
+                            //añadir cantidadn cantidad de productos
                             producto1.cantidad();
                            break;
 
@@ -83,7 +83,7 @@ public class Main {
                            break;
 
                         case 5:
-                            //salida del menu.
+                            //volver atras.
                             break;
                         default:
                             //opcion no valida del menu.
@@ -97,18 +97,18 @@ public class Main {
             case 2:
                 //producto 2
                 opc=0;
-                 do{//repeticion del menu de opciones
+                 do{
                     subMenu();
                     opc = leer.nextInt();//escaneo del dato del menu del usuario
                     switch(opc){
 
                         case 1:
-                            //metodo de la compra
+                            //comprar
                             producto2.comprar();
                             break;
 
                         case 2:
-                            //metodo para añadir n cantidad de productos
+                            //añadir cantidadn cantidad de productos
                             producto2.cantidad();
                            break;
 
@@ -127,7 +127,7 @@ public class Main {
                            break;
 
                         case 5:
-                            //salida del menu.
+                            //volver atras.
                             break;
                         default:
                             //opcion no valida del menu.
@@ -142,18 +142,18 @@ public class Main {
             case 3:
                 //producto 3
                 opc=0;
-                 do{//repeticion del menu de opciones
+                 do{
                     subMenu();
                     opc = leer.nextInt();//escaneo del dato del menu del usuario
                     switch(opc){
 
                         case 1:
-                            //metodo de la compra
+                            //comprar
                             producto3.comprar();
                             break;
 
                         case 2:
-                            //metodo para añadir n cantidad de productos
+                            //añadir cantidadn cantidad de productos
                             producto3.cantidad();
                            break;
 
@@ -172,7 +172,7 @@ public class Main {
                            break;
 
                         case 5:
-                            //salida del menu.
+                            //volver atras.
                             break;
                         default:
                             //opcion no valida del menu.
@@ -187,18 +187,18 @@ public class Main {
             case 4:
                 //producto 4
                 opc=0;
-                 do{//repeticion del menu de opciones
+                 do{
                     subMenu();
                     opc = leer.nextInt();//escaneo del dato del menu del usuario
                     switch(opc){
 
                         case 1:
-                            //metodo de la compra
+                            //comprar
                             producto4.comprar();
                             break;
 
                         case 2:
-                            //metodo para añadir n cantidad de productos
+                            //añadir cantidadn cantidad de productos
                             producto4.cantidad();
                            break;
 
@@ -217,7 +217,7 @@ public class Main {
                            break;
 
                         case 5:
-                            //salida del menu.
+                            //volver atras.
                             break;
                         default:
                             //opcion no valida del menu.
@@ -236,18 +236,18 @@ public class Main {
                 }else{
                 
                 opc=0;
-                 do{//repeticion del menu de opciones
+                 do{
                     subMenu();
                     opc = leer.nextInt();//escaneo del dato del menu del usuario
                     switch(opc){
 
                         case 1:
-                            //metodo de la compra
+                            //comprar
                             producto5.comprar();
                             break;
 
                         case 2:
-                            //metodo para añadir n cantidad de productos
+                            //añadir cantidadn cantidad de productos
                             producto5.cantidad();
                            break;
 
@@ -266,7 +266,7 @@ public class Main {
                            break;
 
                         case 5:
-                            //salida del menu.
+                            //volver atras.
                             break;
                         default:
                             //opcion no valida del menu.
@@ -284,18 +284,18 @@ public class Main {
                 }else{
                 
                 opc=0;
-                 do{//repeticion del menu de opciones
+                 do{
                     subMenu();
                     opc = leer.nextInt();//escaneo del dato del menu del usuario
                     switch(opc){
 
                         case 1:
-                            //metodo de la compra
+                            //comprar
                             producto6.comprar();
                             break;
 
                         case 2:
-                            //metodo para añadir n cantidad de productos
+                            //añadir cantidadn cantidad de productos
                             producto6.cantidad();
                            break;
 
@@ -314,7 +314,7 @@ public class Main {
                            break;
 
                         case 5:
-                            //salida del menu.
+                            //volver atras.
                             break;
                         default:
                             //opcion no valida del menu.
@@ -338,11 +338,12 @@ public class Main {
                 }
                 break;
             case 0:
+                //Salir del programa
                 System.out.println("Adios");
                 break;
             default:
                 //opcion no valida del menu.
-                System.out.println("La opcion no es valida.");
+                System.out.println("La opcion es invalida");
                 break;
                         
         }
@@ -359,7 +360,7 @@ public class Main {
         System.out.println("2.Añadir cantidad.");
         System.out.println("3.Ver Cantidad Ventas.");
         System.out.println("4.Ver Cantidad Ganancias.");
-        System.out.println("5.Regresar.");
+        System.out.println("5.Volver atras.");
         System.out.print("Digite el numero de la opcion que desea: ");
     }
     //Void para dar un inicio visual

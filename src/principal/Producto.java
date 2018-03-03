@@ -17,34 +17,34 @@ public class Producto {
     public String nombre;
     public float precio = 0;
     int cantidadVentas;
-    int cantidadAlmacenada;
+    int unidadesAlmacenadas;
     public float ganancias = 0;
-    int cantidadAgregada;
+    int unidadesAgregadas;
     Producto(){
         
     }
     /**
      * 
      */
-    Producto(String nombre,float precio,int cantidadAlmacenada ){
+    Producto(String nombre,float precio,int unidadesAlmacenadas ){
          this();
         this.nombre=nombre;
         this.precio=precio;
         this.ganancias=ganancias;
-        this.cantidadAgregada=cantidadAgregada;
-        this.cantidadAlmacenada=cantidadAlmacenada;
+        this.unidadesAgregadas=unidadesAgregadas;
+        this.unidadesAlmacenadas=unidadesAlmacenadas;
     }
     /**
      * Metodo para comprar una unidad del producto.
      */
     protected void comprar(){
-        if(this.cantidadAlmacenada<=0){
+        if(this.unidadesAlmacenadas<=0){
             System.out.println("El producto se ha agotado. Intentelo mas tarde.");
         }else{
             System.out.println("Ha comprado "+this.nombre+". Gracias por su compra.");
-            this.cantidadAlmacenada--;
+            this.unidadesAlmacenadas--;
             this.cantidadVentas++;
-            System.out.println("La nueva cantidad de "+this.nombre+" almacenados es: "+this.cantidadAlmacenada);
+            System.out.println("La nueva cantidad de "+this.nombre+" almacenados es: "+this.unidadesAlmacenadas);
         }
     }
     /**
@@ -54,17 +54,17 @@ public class Producto {
         Scanner leer = new Scanner(System.in);
         System.out.print("Digite la cantidad de "+this.nombre+" que desea almacenar: ");
         do{
-        this.cantidadAgregada=leer.nextInt();
-        }while(this.cantidadAgregada<0);
-        this.cantidadAlmacenada=this.cantidadAlmacenada+this.cantidadAgregada;
-        System.out.println("La nueva cantidad de "+this.nombre+" almacenados es: "+this.cantidadAlmacenada);
+        this.unidadesAgregadas=leer.nextInt();
+        }while(this.unidadesAgregadas<0);
+        this.unidadesAlmacenadas=this.unidadesAlmacenadas+this.unidadesAgregadas;
+        System.out.println("La nueva cantidad de "+this.nombre+" almacenados es: "+this.unidadesAlmacenadas);
     }
     /**
      * Metodo para ver la cantidad de Ventas del producto.
      */
     protected void verCantidadVentas(){
         System.out.println("La cantidad de "+this.nombre+" vendidos es: "+this.cantidadVentas);
-        System.out.println("El porcenaje de ventas es del: %"+(this.cantidadVentas*100)/(this.cantidadVentas+this.cantidadAlmacenada));
+        System.out.println("El porcenaje de ventas es del: %"+(this.cantidadVentas*100)/(this.cantidadVentas+this.unidadesAlmacenadas));
     }
     /**
      * Metodo para ver las ganancias.
@@ -84,11 +84,11 @@ public class Producto {
         System.out.println("Precio del producto: ");
         this.precio=leer.nextFloat();
         System.out.println("Cantidad a almacenar: ");
-        this.cantidadAlmacenada=leer.nextInt();
+        this.unidadesAlmacenadas=leer.nextInt();
         System.out.println("El nuevo producto ha sido añadido.");
     }
     @Override
     public String toString(){
-        return "Nombre: "+nombre+" Precio: "+precio+" Cantidad Ventas: "+cantidadVentas+" Cantidad Almacenada: "+cantidadAlmacenada+" Ganancias: "+ganancias+" Cantidad Agregada: "+cantidadAgregada ;
+        return "Nombre: "+nombre+" Precio: "+precio+" Cantidad Ventas: "+cantidadVentas+" Cantidad Almacenada: "+unidadesAlmacenadas+" Ganancias: "+ganancias+" Cantidad Agregada: "+unidadesAgregadas ;
     };  
 }
